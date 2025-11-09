@@ -1,19 +1,13 @@
 """ Importing """
-from textual.app import App , ComposeResult
+from textual.app import App , ComposeResult , Screen
 from textual import events
 from textual.containers import Container
-from textual.widgets import  Button, Static, Label
+from textual.widgets import  Button, Label
 
 """The App"""
 class MyApp(App) :
 
     CSS_PATH = "stylish.css"
-
-
-    def on_mount(self) -> None:
-        self.screen.styles.background =  "black"
-
-
 
     def compose(self) -> ComposeResult:
         yield  Label("Hello Textual", id="label1")
@@ -26,7 +20,6 @@ class MyApp(App) :
         if event.button.id == "click1":
             self.query_one(Label).update("Du hast gecklicked")
             event.button.styles.background = "red"
-
         if event.button.id == "click2":
             self.exit()
 

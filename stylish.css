@@ -1,3 +1,10 @@
+
+    Screen {
+        layout: grid;
+        grid-size: 1;
+        grid-gutter: 1  2;
+    }
+
     Container {
             align: center middle;
             text-style: bold;
