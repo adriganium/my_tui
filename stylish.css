@@ -1,0 +1,28 @@
+    Container {
+            align: center middle;
+            text-style: bold;
+    }
+
+    #click1 {
+        margin: 1 0;
+        color: green;
+        text-style: italic;
+    }
+
+    #click2 {
+        margin: 1 0;
+        color: blue;
+    }
+
+    #label1 {
+        margin: 0 0;
+        color: yellow;
+    }
+
+    #label2 {
+        margin: 0 0;
+        color: purple;
+        text-style: bold;
+    }
+
+

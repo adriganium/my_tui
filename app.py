@@ -1,32 +1,13 @@
 """ Importing """
 from textual.app import App , ComposeResult
 from textual import events
-from textual.getters import query_one
+from textual.containers import Container
 from textual.widgets import  Button, Static, Label
 
 """The App"""
 class MyApp(App) :
 
-    CSS = """
-    #centertext {
-            align: center middle;
-    }
-        
-    #click1 {
-        margin: 1 0;
-        color: green;
-    }
-    
-    #click2 {
-        margin: 1 0;
-        color: blue;
-    }
-    
-    Label { 
-        margin: 0 0;
-        color: yellow;
-    }
-    """
+    CSS_PATH = "stylish.css"
 
 
     def on_mount(self) -> None:
@@ -35,11 +16,11 @@ class MyApp(App) :
 
 
     def compose(self) -> ComposeResult:
-        yield  Label("Hello Textual")
-        yield  Button("CLick hier !", id="click1")
-        yield  Button("CLick NICHT hier !", id="click2")
-        yield  Static("Was wirst du drücken????", id="centertext")
-
+        yield  Label("Hello Textual", id="label1")
+        yield  Button("Click hier !", id="click1")
+        yield  Button("Click NICHT hier !", id="click2")
+        #with Container():
+        #    yield  Label("Was wirst du drücken????", id="label2")
 
     def on_button_pressed(self, event: Button.Pressed) -> None:
         if event.button.id == "click1":
@@ -53,8 +34,6 @@ class MyApp(App) :
     def _on_key(self, event: events.Key) -> None:
         if event.key == "q":
             self.exit()
-
-
 
 if __name__ == "__main__":
     app = MyApp()
