@@ -1,12 +1,7 @@
 
-    Screen {
-        layout: grid;
-        grid-size: 1;
-        grid-gutter: 1  2;
-    }
 
     Container {
-            align: center middle;
+            align: left top;
             text-style: bold;
     }
 
@@ -22,6 +17,7 @@
     }
 
     #label1 {
+        border: solid red;
         margin: 0 0;
         color: yellow;
     }
@@ -29,7 +25,6 @@
     #label2 {
         margin: 0 0;
         color: purple;
-        text-style: bold;
     }
 
 
