@@ -27,7 +27,7 @@ class MyApp(App) :
         sending_bits = psutil.net_io_counters(pernic=False, nowrap=True).bytes_sent
         gesandte_bits = str(int(sending_bits / pow(2, 20)))
         ip_addr = psutil.net_connections(kind="inet4")
-        ipv4addr = ip_addr[0].laddr[0]
+        ipv4addr = ip_addr[1].laddr[0]
 
 
         #Creating lines
@@ -67,7 +67,7 @@ class MyApp(App) :
 
         ip_addr_widget = self.query_one("#stat6", Static)
         adressen_dings = psutil.net_connections(kind="inet4")
-        ipv4addresse = adressen_dings[0].laddr[0]
+        ipv4addresse = adressen_dings[1].laddr[0]
 
 
         ram_widget.update(f"Total Available RAM: {available} MB")
