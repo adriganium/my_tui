@@ -92,7 +92,5 @@ if __name__ == "__main__":
     app.run()
 
 
-# fetching and displaying of system processes with psutil
-# working with set_time to update the values of psutil
-# ask for user input , and give the user the ability to write in a promt box to start fetures
-# implement
+# implementing that there are also time dependent values like
+# for example data recieved per socond and such
